@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": "vite",
-  "installCommand": "if [ -d frontend ]; then cd frontend && npm install; else npm install; fi",
+  "installCommand": "if [ -d frontend ]; then cd frontend && npm ci --no-audit --no-fund; else npm ci --no-audit --no-fund; fi",
   "buildCommand": "if [ -d frontend ]; then cd frontend && npm run build && cd .. && rm -rf dist && cp -R frontend/dist dist; else npm run build; fi",
   "outputDirectory": "dist",
   "rewrites": [
